@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+    <item android:title="@string/balance"
+        android:icon="@drawable/ic_baseline_money_24"
+        >
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/nav_balance"
+                    android:icon="@drawable/ic_baseline_money_24"
+                    android:title="@string/balance_change_btn" />
+
+                <item android:id="@+id/nav_balance_history"
+                    android:icon="@drawable/ic_baseline_money_24"
+                    android:title="@string/income_expense_history" />
+
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/shopping_list"
+        android:icon="@drawable/ic_baseline_money_24"
+        >
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/nav_add_shopping_list"
+                    android:icon="@drawable/ic_baseline_money_24"
+                    android:title="@string/add_shopping_list" />
+
+                <item android:id="@+id/nav_list_shopping_lists"
+                    android:icon="@drawable/ic_baseline_money_24"
+                    android:title="@string/show_shopping_lists" />
+
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/nav_add_car"
+        android:icon="@drawable/ic_baseline_construction_24"
+        android:title="@string/add_car"/>
+    <item android:id="@+id/list_cars"
+        android:icon="@drawable/ic_baseline_construction_24"
+        android:title="@string/list_cars"/>
+    <item android:id="@+id/nav_tasks"
+        android:icon="@drawable/ic_baseline_construction_24"
+        android:title="@string/tasks"/>
+    <item android:id="@+id/nav_add_task"
+        android:icon="@drawable/ic_baseline_construction_24"
+        android:title="Add Task"/>
+    <item android:id="@+id/nav_list_tasks"
+        android:icon="@drawable/ic_baseline_construction_24"
+        android:title="List tasks"/>
+
+    <item android:title="@string/settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        >
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/household_settings"
+                    android:icon="@drawable/ic_baseline_house_24"
+                    android:title="@string/house_settings" />
+
+                <item android:id="@+id/nav_settings"
+                    android:icon="@drawable/ic_baseline_person_24"
+                    android:title="@string/user_settings" />
+
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_construction_24"
+        android:title="@string/logout"/>
+</group>
+</menu>

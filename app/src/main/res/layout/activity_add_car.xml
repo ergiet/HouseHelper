@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCar">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/car_make"
+        android:background="#30ffffff"
+        android:hint="@string/car_make"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:drawableLeft="@drawable/ic_baseline_border_color_24"
+        android:drawablePadding="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/car_model"
+        android:layout_below="@id/car_make"
+        android:background="#30ffffff"
+        android:hint="@string/car_model"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:drawableLeft="@drawable/ic_baseline_border_color_24"
+        android:drawablePadding="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/car_plate"
+        android:layout_below="@id/car_model"
+        android:background="#30ffffff"
+        android:hint="@string/plates"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:drawableLeft="@drawable/ic_baseline_border_color_24"
+        android:drawablePadding="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/car_vin"
+        android:layout_below="@id/car_plate"
+        android:background="#30ffffff"
+        android:hint="@string/vin_number"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:drawableLeft="@drawable/ic_baseline_border_color_24"
+        android:drawablePadding="20dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/car_first_registration"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_below="@id/car_vin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/car_first_registration" />
+
+    <LinearLayout
+        android:id="@+id/date_pickers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/car_first_registration"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/car_mot"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/MOT" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/car_insurance"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/car_insurance" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/private_car_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/date_pickers"
+        android:background="#30ffffff"
+        android:padding="20dp"
+        android:text="Is car private?" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_car_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/private_car_checkbox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/add_car"
+        app:cornerRadius="100dp"
+        android:backgroundTint="#30ffffff"
+        app:strokeColor="@color/black"
+        android:textColor="@color/black"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+</RelativeLayout>

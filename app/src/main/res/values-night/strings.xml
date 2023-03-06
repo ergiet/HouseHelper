@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="leave_household_button">Leave household</string>
+    <string name="incorrect_e_mail">E-mail address is incorrect</string>
+</resources>

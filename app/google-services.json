@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "374252253115",
+    "project_id": "househelper-2c070",
+    "storage_bucket": "househelper-2c070.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374252253115:android:422413fca9a72a92a35e9e",
+        "android_client_info": {
+          "package_name": "com.example.househelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374252253115-hl9b5lj9rdcej4oq0733g07t2t1sroal.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_4hssdO3a11aq0ZWWLyGUSYUB08-LIq8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374252253115-hl9b5lj9rdcej4oq0733g07t2t1sroal.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

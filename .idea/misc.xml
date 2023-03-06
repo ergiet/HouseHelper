@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.2235" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/drawable/toolbar_bg.xml" value="0.172" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_balance.xml" value="0.1707193515704154" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_create_house.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_drawer_base.xml" value="0.2767210144927536" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_drawer_header.xml" value="0.2767210144927536" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_house_settings.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_house_settings_option.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_join_house.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_main2.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_reset_house_password.xml" value="0.23641304347826086" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_sign_up.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/activity_tasks.xml" value="0.24456521739130435" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/layout/drawer_content.xml" value="0.2767210144927536" />
+        <entry key="..\:/Users/Ergiet/AndroidStudioProjects/HouseHelper/app/src/main/res/menu/main_drawer_menu.xml" value="0.36666666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

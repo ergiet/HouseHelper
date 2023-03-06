@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HouseSettings">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/household_info_welcome"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="50px"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/household_info_id"
+        android:layout_below="@+id/household_info_welcome"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/household_info_password"
+        android:layout_below="@id/household_info_id"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/household_info_data"
+        android:layout_below="@id/household_info_password"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/create_house_settings_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_below="@id/household_info_data"
+        android:layout_centerHorizontal="true"
+        android:text="@string/create_house"
+        app:cornerRadius="100dp"
+        android:backgroundTint="#30ffffff"
+        app:strokeColor="@color/black"
+        android:textColor="@color/black"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/join_house_settings_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_below="@id/create_house_settings_btn"
+        android:layout_centerHorizontal="true"
+        android:text="@string/join_house"
+        app:cornerRadius="100dp"
+        android:backgroundTint="#30ffffff"
+        app:strokeColor="@color/black"
+        android:textColor="@color/black"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reset_house_password_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_below="@id/household_info_data"
+        android:layout_centerHorizontal="true"
+        android:text="@string/reset_house_password"
+        app:cornerRadius="100dp"
+        android:backgroundTint="#30ffffff"
+        app:strokeColor="@color/black"
+        android:textColor="@color/black"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/leave_house_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_below="@id/reset_house_password_btn"
+        android:layout_centerHorizontal="true"
+        android:text="@string/leave_household_button"
+        app:cornerRadius="100dp"
+        android:backgroundTint="#30ffffff"
+        app:strokeColor="@color/black"
+        android:textColor="@color/black"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+</RelativeLayout>
