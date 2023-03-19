@@ -64,7 +64,10 @@ public class AddTask extends Drawer implements AdapterView.OnItemSelectedListene
         }
 
         MaterialButton task_interval_time = (MaterialButton) findViewById(R.id.task_interval_time);
+        MaterialButton task_time = (MaterialButton) findViewById(R.id.task_time);
+
         task_interval_time.setOnClickListener(new AddTask.DatePickerOnClickListener());
+        task_time.setOnClickListener(new AddTask.DatePickerOnClickListener());
 
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.HOUR_OF_DAY, 0);
@@ -72,6 +75,7 @@ public class AddTask extends Drawer implements AdapterView.OnItemSelectedListene
         cal.set(Calendar.SECOND, 0);
         cal.set(Calendar.MILLISECOND, 0);
         task_interval_time.setText(cal.get(Calendar.DAY_OF_MONTH) + "/" + (cal.get(Calendar.MONTH) + 1) + "/" + cal.get(Calendar.YEAR));
+        task_time.setText(cal.get(Calendar.DAY_OF_MONTH) + "/" + (cal.get(Calendar.MONTH) + 1) + "/" + cal.get(Calendar.YEAR));
 
         boolean[] isPrivate = {false};
         CheckBox private_checkbox = findViewById(R.id.task_private_checkbox);
@@ -91,9 +95,11 @@ public class AddTask extends Drawer implements AdapterView.OnItemSelectedListene
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 isRecursive[0] = isChecked;
                 if(isChecked){
+                    task_time.setVisibility(View.GONE);
                     task_interval.setVisibility(View.VISIBLE);
                 }else{
                     task_interval.setVisibility(View.GONE);
+                    task_time.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -103,16 +109,23 @@ public class AddTask extends Drawer implements AdapterView.OnItemSelectedListene
 
         TextView tvtask =(TextView) findViewById(R.id.task_task);
         TextView tvinterval_time =(TextView) findViewById(R.id.task_interval_time);
+        TextView tvtask_time =(TextView) findViewById(R.id.task_time);
+
 
         MaterialButton addTask = (MaterialButton) findViewById(R.id.add_task_btn);
         addTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                String task, interval_time_text;
+                String task, interval_time_text, task_time_text;
                 task = tvtask.getText().toString();
-                task_interval_type = interval_type.get(task_interval_type).toString();
+                if(isRecursive[0] == true){
+                    task_interval_type = interval_type.get(task_interval_type).toString();
+                }else{
+                    task_interval_type = "none";
+                }
                 Date currentDate = new Date(System.currentTimeMillis());
                 Timestamp interval_time = new Timestamp(currentDate);
+                Timestamp task_time = new Timestamp(currentDate);
 
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -124,6 +137,14 @@ public class AddTask extends Drawer implements AdapterView.OnItemSelectedListene
                     Toast.makeText(getApplicationContext(), "All fields are required", Toast.LENGTH_SHORT).show();
                 }
 
+                try {
+                    task_time_text = tvtask_time.getText().toString();
+                    Date task_time_date = simpleDateFormat.parse(task_time_text);
+                    task_time = new Timestamp(task_time_date);
+                } catch (ParseException e) {
+                    Toast.makeText(getApplicationContext(), "All fields are required", Toast.LENGTH_SHORT).show();
+                }
+
                 if(!task.equals("")) {
                     //Start ProgressBar first (Set visibility VISIBLE)
                     Map<String, Object> taskObject = new HashMap<>();
@@ -131,9 +152,14 @@ public class AddTask extends Drawer implements AdapterView.OnItemSelectedListene
                     taskObject.put("is_private", isPrivate[0]);
                     taskObject.put("is_recursive", isRecursive[0]);
                     taskObject.put("user", userid_value);
-                    if(isRecursive[0]){
+                    if(isRecursive[0] == true){
                         Map<String, Object> prepared_interval = new HashMap<>();
                         prepared_interval.put("time", interval_time);
+                        prepared_interval.put("type", task_interval_type);
+                        taskObject.put("interval", prepared_interval);
+                    }else if(isRecursive[0] == false){
+                        Map<String, Object> prepared_interval = new HashMap<>();
+                        prepared_interval.put("time", task_time);
                         prepared_interval.put("type", task_interval_type);
                         taskObject.put("interval", prepared_interval);
                     }
